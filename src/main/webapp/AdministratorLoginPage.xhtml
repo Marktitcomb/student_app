@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+ 
+<h:head>
+    <title>JavaCodeGeeks2.0</title>
+</h:head>
+<h:body>
+    HELLO
+    Remember the rest of the form isnt showing for some reason but
+    we know the h tagging works because it correctly displayed the title 
+     <h:form>
+            <h:panelGrid columns="3">
+                <h:outputLabel value="UserName:"/>
+                <h:inputText id="username"
+                             value="#{adminaccount.userName}">
+                </h:inputText>        
+                <h:message for="nameInputText" style="color:red"/>
+
+                <h:outputLabel value="Password:"/>
+                <h:inputText id="password"
+                             value="#{adminaccount.password}">
+                </h:inputText>        
+                <h:message for="nameInputText" style="color:red"/>
+            </h:panelGrid>
+
+            <h:commandButton value="Submit" action="#{adminaccount.validateAdministrator}" />
+        </h:form>
+
+    </h:body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Create Courses Here</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            
+            <h:outputLabel value="Course Name: "/>
+            <h:inputText id="name" 
+                         value="#{course.name}" />
+            <br/>
+
+            <h:outputLabel value="Course ID:  "/>
+            <h:inputText id="id"
+                         value="#{course.id}" />
+            <br/>
+        <!--So this gets the list of all the instructors from the database-->
+        <!--Then the user selects each -->
+            <h:outputLabel value="Select Instructors: "/>
+            <h:selectManyMenu
+                id="instructors_selectManyMenu"
+                value="#{course.selectInstructors}">
+                <f:selectItems
+                    value="#{course.instructorslist}"/>
+            </h:selectManyMenu>
+
+            <br/>
+
+            <h:outputLabel value="Select Students: "/>
+            <h:selectManyMenu
+                id="student_selectManyMenu"
+                value="#{course.selectStudents}">
+                <f:selectItems
+                    value="#{course.studentsList}"/>
+            </h:selectManyMenu>
+
+            <br/>
+
+            <h:commandButton value="Submit" action="#{course.courseCreationProcess}" />
+
+        </h:form>
+
+    </h:body>
+</html>

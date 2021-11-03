@@ -1,0 +1,10 @@
+com\mtits\studentapp\accounts\TempStudentAccount.class
+com\mtits\studentapp\pages\StudentCoursePage.class
+com\mtits\studentapp\accounts\StudentAccount.class
+com\mtits\studentapp\accounts\TempInstructorAccount.class
+com\mtits\studentapp\pages\StudentLogin.class
+com\mtits\studentapp\accounts\InstructorAccount.class
+com\mtits\studentapp\database\Database.class
+com\mtits\studentapp\accounts\Account.class
+com\mtits\studentapp\courses\Course.class
+com\mtits\studentapp\accounts\AdministratorAccount.class
